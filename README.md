@@ -18,17 +18,17 @@ error-prone manual processes. This limits the ability to gain timely insights
 customer satisfaction.
 
 ## Objectives:
- '●' Implement a robust data pipeline to automate data extraction,
+ `●` Implement a robust data pipeline to automate data extraction,
 transformation, and loading (ETL) processes.
 
-'●' Enhance data quality and consistency through effective data cleaning and
+`●` Enhance data quality and consistency through effective data cleaning and
 transformation techniques.
 
-'●' Enable scalable and efficient data storage and management.
+`●` Enable scalable and efficient data storage and management.
 
-'●' Provide timely and actionable insights to support business decisions.
+`●` Provide timely and actionable insights to support business decisions.
 
-'●' Ensure data security and compliance with industry standards.
+`●` Ensure data security and compliance with industry standards.
 
 ## Tech Stack:
 For this case study, the following tech stack was employed:
@@ -42,6 +42,9 @@ F. Store API: For extracting raw data from Kike Retail' systems.
 ## Data Architecture:
 
 ![image](https://github.com/user-attachments/assets/b4dcdc68-3946-4ae1-a148-bc284f91e308)
+
+
+## 
 
 
 
