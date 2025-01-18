@@ -54,10 +54,10 @@ and uploads the data in chunks to Azure Blob Storage. Environment variables stor
 #### Chunk size and file setup:
 -The chunk_size is set to 4MB (4 * 1024 * 1024 bytes), meaning each chunk of data that is uploaded will be of this size.
 -files is a list of tuples. Here, it contains the DataFrame (df) and the blob name 'kike_stores_dataset'.
-'''python
+```python
 chunk_size = 4 * 1024 * 1024
 files = [(df, 'kike_stores_dataset')]
-'''
+```
 
 
 
