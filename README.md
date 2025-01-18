@@ -9,13 +9,6 @@ operations and enhance decision-making, Kike Retail aims to leverage Azure
 cloud data engineering solutions to transform their data processing and
 analytics capabilities.
 
-## Business Problem Statement:
-Kike Retail struggles with managing large volumes of data from multiple
-sources, leading to inefficiencies in data processing and analysis. The
-current system lacks automation, resulting in time-consuming and
-error-prone manual processes. This limits the ability to gain timely insights
-#and make data-driven decisions to improve business performance and
-customer satisfaction.
 
 ## Objectives:
  `●` Implement a robust data pipeline to automate data extraction,
@@ -30,6 +23,7 @@ transformation techniques.
 
 `●` Ensure data security and compliance with industry standards.
 
+
 ## Tech Stack:
 For this case study, the following tech stack was employed:
 A. Python: For scripting and automation of data processes.
@@ -39,12 +33,35 @@ D. Azure Data Factory: For orchestrating data workflows and ETL processes.
 E. Azure Databricks: For big data processing and advanced analytics.
 F. Store API: For extracting raw data from Kike Retail' systems.
 
+
 ## Data Architecture:
 
 ![image](https://github.com/user-attachments/assets/b4dcdc68-3946-4ae1-a148-bc284f91e308)
 
 
-## 
+## Business Problem Statement:
+Kike Retail struggles with managing large volumes of data from multiple
+sources, leading to inefficiencies in data processing and analysis. The
+current system lacks automation, resulting in time-consuming and
+error-prone manual processes. This limits the ability to gain timely insights
+#and make data-driven decisions to improve business performance and
+customer satisfaction.
+The code reads a CSV file from a URL into a pandas DataFrame, prepares the file for upload by converting it into an in-memory CSV format,
+and uploads the data in chunks to Azure Blob Storage. Environment variables store sensitive information such as the Azure connection string and container name.
+
+### Steps of Uploading Large Dataset:
+
+#### Chunk size and file setup:
+-The chunk_size is set to 4MB (4 * 1024 * 1024 bytes), meaning each chunk of data that is uploaded will be of this size.
+-files is a list of tuples. Here, it contains the DataFrame (df) and the blob name 'kike_stores_dataset'.
+'''python
+chunk_size = 4 * 1024 * 1024
+files = [(df, 'kike_stores_dataset')]
+'''
+
+
+
+
 
 
 
