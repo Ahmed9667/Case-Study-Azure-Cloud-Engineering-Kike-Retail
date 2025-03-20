@@ -166,7 +166,21 @@ carts.to_csv('/dbfs/mnt/ahmed_blob2/cleaned_data/carts.csv',index=False)
 orders.to_csv('/dbfs/mnt/ahmed_blob2/cleaned_data/orderss.csv',index=False)
 ```
 
-### Check for the applied new generated data in Azure blob storage
+## Orchestrate Databricks nootbook using Azure Data Factory:
+
+### 1.Create Data Factory
+![image](https://github.com/user-attachments/assets/d65303ac-385a-4be1-b933-39a0c0dfc8be)
+
+### 2.insert credential of databricks link service with azure data factory:
+![image](https://github.com/user-attachments/assets/2393eac4-f25c-4086-8acd-657488488f1a)
+
+### 3.Validate Pipeline:
+![image](https://github.com/user-attachments/assets/7e60d072-506f-4c0f-87cc-546340959938)
+
+### 4.Run Pipeline Orchestration:
+![image](https://github.com/user-attachments/assets/8463a71d-e422-4518-84ed-9f3fcc5f5a8e)
+
+### 5.Check for the applied new generated data in Azure blob storage
 
 ![image](https://github.com/user-attachments/assets/629fc68f-b2cf-4f48-a3f3-bba20d725487)
 
