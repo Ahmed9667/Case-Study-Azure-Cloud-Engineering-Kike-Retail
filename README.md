@@ -115,6 +115,13 @@ and then make sure dataset is uploaded successfully
 
 ![image](https://github.com/user-attachments/assets/eafacb00-d44d-429a-a8ee-38758e13697d)
 
+## Create Cluster on Azure Databricks to operate the uloaded data
+
+![image](https://github.com/user-attachments/assets/fd78376c-47ae-4d3b-a77e-353a9902e5bd)
+
+
+
+
 
 
 
