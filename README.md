@@ -119,6 +119,60 @@ and then make sure dataset is uploaded successfully
 
 ![image](https://github.com/user-attachments/assets/fd78376c-47ae-4d3b-a77e-353a9902e5bd)
 
+## Configure databricks with kikeretail azure blob storage
+
+![image](https://github.com/user-attachments/assets/6e56903c-223b-4520-9ecc-04c7f9fcabb8)
+
+## Data Transformation
+
+```python
+#Drop Duplicated Values
+df = df.drop_duplicates()
+
+# Fill null values
+for i in df.columns:
+    if df[i].dtype == 'object':
+        df[i] = df[i].fillna('unknown')
+    else:
+         df[i] = df[i].fillna(df[i].mean())
+
+#create table products
+products_columns = ['ProductID', 'ProductName', 'Category', 'SubCategory', 'Brand','Price', 'Discount', 'Stock','Rating', 'ReviewCount']
+products = df[products_columns].drop_duplicates().reset_index(drop=True)
+
+#create table users
+users_columns = ['UserID', 'UserName','UserAge', 'UserGender', 'UserLocation']
+users = df[users_columns].drop_duplicates().reset_index(drop=True)
+
+#create table carts
+carts_columns = ['CartID', 'CartDate','CartTotal', 'CartItemCount', 'CartStatus']
+carts = df[carts_columns].drop_duplicates().reset_index(drop=True)
+
+#table orders
+orders = df.merge(products, on=products_columns , how='left')\
+    .merge(users, on=users_columns,how='left')\
+    .merge(carts, on=carts_columns ,how='left')\
+    [['OrderID','ProductID','UserID','CartID','OrderDate',\
+       'OrderStatus', 'PaymentMethod', 'ShipmentDate', 'DeliveryDate',\
+       'ReturnDate', 'RefundAmount', 'ReferralSource', 'PromotionCode']]
+print('Created Tables Successfully')
+```
+## Save Cleaned Data
+```python
+#saving Cleaned Datasets
+products.to_csv('/dbfs/mnt/ahmed_blob2/cleaned_data/products.csv',index=False)
+users.to_csv('/dbfs/mnt/ahmed_blob2/cleaned_data/users.csv',index=False)
+carts.to_csv('/dbfs/mnt/ahmed_blob2/cleaned_data/carts.csv',index=False)
+orders.to_csv('/dbfs/mnt/ahmed_blob2/cleaned_data/orderss.csv',index=False)
+```
+
+### Check for the applied new generated data in Azure blob storage
+
+![image](https://github.com/user-attachments/assets/629fc68f-b2cf-4f48-a3f3-bba20d725487)
+
+                    
+
+
 
 
 
