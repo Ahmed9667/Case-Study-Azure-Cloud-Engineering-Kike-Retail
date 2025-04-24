@@ -27,10 +27,15 @@ transformation techniques.
 ## Tech Stack:
 For this case study, the following tech stack was employed:
 A. Python: For scripting and automation of data processes.
+
 B. SQL: For querying and managing relational databases.
+
 C. Azure Blob Storage: For scalable data storage.
+
 D. Azure Data Factory: For orchestrating data workflows and ETL processes.
+
 E. Azure Databricks: For big data processing and advanced analytics.
+
 F. Store API: For extracting raw data from Kike Retail' systems.
 
 
